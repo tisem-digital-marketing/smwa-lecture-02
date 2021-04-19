@@ -99,7 +99,7 @@ url = "https://github.com/tisem-digital-marketing/smwa-lecture-02"
 ## Suggested Citation (Template)
 
 ```{r, engine='out', eval = FALSE}
-@misc{smwa-lecture-template,
+@misc{smwa-lecture-02,
       title={"Social Media and Web Analytics: Lecture Slide Template"},
       author={Lachlan Deer},
       year={2021},

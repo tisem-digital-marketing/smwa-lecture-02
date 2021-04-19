@@ -1,5 +1,5 @@
 ---
-title: "MODULE NAME"
+title: "Online Reputation"
 subtitle: "Social Media and Web Analytics"
 author: "Lachlan Deer"
 institute: "Tilburg University"
@@ -22,7 +22,27 @@ TBD
 ---
 class: inverse, center, middle
 
-# Section XX
+# Dynamics of Seller Reputation
+
+---
+# Slide Title 
+
+course content here
+
+---
+class: inverse, center, middle
+
+# Reputation and Review Fraud
+
+---
+# Slide Title 
+
+course content here
+
+---
+class: inverse, center, middle
+
+# Managerial Response to Online Reviews
 
 ---
 # Slide Title 
@@ -35,11 +55,11 @@ course content here
 Suggested Citation:
 
 ```{r, engine='out', eval = FALSE}
-@misc{ddw2021,
-      title={"Social Media and Web Analytics: Lecture Slide Template"},
+@misc{smwa-lecture-02,
+      title={"Social Media and Web Analytics: Lecture 02 - Online Reputation"},
       author={Lachlan Deer},
       year={2021},
-      url = "https://github.com/tisem-digital-marketing/smwa-lecture-template"
+      url = "https://github.com/tisem-digital-marketing/smwa-lecture-02"
 }
 ```
 

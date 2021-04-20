@@ -17,23 +17,44 @@ class: font200
 
 # Learning Goals for this Week
 
-TBD
+At the end of this lecture you will be able to:
+
+1. Summarize the impact of negative reputation on sales
+2. Diagnose situations where fake reviews are more or less prevalent
+3. Explain how managerial responses to online reviews impact future reviews
+4. Interpret estimates from Difference in Differences regression 
 
 ---
 class: inverse, center, middle
 
 # Online Reputation Matters
 
+---
+# Online Reputation Matters
+
+```{r, echo = FALSE, fig.align = "center", out.width="65%"}
+knitr::include_graphics("figs/reputation_matters.png")
+```
+
+Image from [WebpageFX](https://www.webpagefx.com/)
 
 ---
 # Online Reputation Effects Perceptions
 
-something
+```{r, echo = FALSE, fig.align = "center", out.width="70%"}
+knitr::include_graphics("figs/reputation_perceptions.png")
+```
+
+Image from [WebpageFX](https://www.webpagefx.com/)
 
 ---
 # Online Reputation Effects Sales
 
-something
+```{r, echo = FALSE, fig.align = "center", out.width="80%"}
+knitr::include_graphics("figs/reputation_sales.png")
+```
+
+Image from [WebpageFX](https://www.webpagefx.com/)
 
 ---
 # Why Online Reputation Matters
@@ -57,11 +78,13 @@ $\implies$ **reputation systems**
 ---
 # What do we want to know?
 
+This class:
 
-... and much more
+* How does seller reputation impact pricing and sales?
+* Do fake reviews impact online reputation? How? When?
+* Are managerial responses an effective way to manage online reputation?S
 
-* But there's a fixed amount of time here 
-
+Note: There's much more out there - let us know if you want further links in to the literature
 
 ---
 class: inverse, center, middle

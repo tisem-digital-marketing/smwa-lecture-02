@@ -244,11 +244,11 @@ Interpretation:
 # Target & Style of Managerial Response
 
 
-```{r, echo = FALSE, fig.align = "center", out.width="90%"}
+```{r, echo = FALSE, fig.align = "center", out.width="65%"}
 knitr::include_graphics("figs/mr_length_result.png")
 ```
 
-Main Takeaway:
+Main Takeaways:
 
 * Short Responses to Positive Reviews to not distract consumers
 * Longer Responses to Negative Reviews to mitigate concerns 

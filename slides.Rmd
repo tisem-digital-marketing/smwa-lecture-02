@@ -254,7 +254,12 @@ Main Takeaways:
 * Longer Responses to Negative Reviews to mitigate concerns 
 
 ---
+class: inverse, center, middle
+
 # Recap
+
+---
+# Summary
 
 ---
 # License & Citation

@@ -69,14 +69,43 @@ class: inverse, center, middle
 # Dynamics of Seller Reputation
 
 ---
-# Slide Title 
+# Seller Reputation in the Online Marketplace 
 
-course content here
+**Motivation**: Reputation mechanisms allow consumers to monitor firms
+
+* How do consumers respond to changes in seller reputation?
+
+**Specific Questions**: What is the effect of reputation on:
+
+* Price / Willingness to Pay
+* Sales Growth
+* Subsequent reviews
+
+Following discussion based on [Cabral & Hortascu, 2010][cabral]
+
+[cabral]: https://onlinelibrary.wiley.com/doi/10.1111/j.1467-6451.2010.00405.x
+
+---
+# Empirical Approach
+
+**Data**: eBay, follow sellers of five homogenous products
+
+* Transaction level data 
+* Seller's sequence of reviews
+
+**Empirical Approach**:
+
+* Descriptive Regressions
+* Differences in Means
+
+**None** of the effects we discuss here are **causal**
+
+* Think of the results as descriptive associations between two variables
 
 ---
 # Reputation & Price
 
-Estimating Equation:
+**Estimating Equation**:
 
 $$
 price = \beta ( \text{reputation_measure} ) +
@@ -84,21 +113,29 @@ price = \beta ( \text{reputation_measure} ) +
         \text{error}
 $$
 
-Results
+**Excerpt fo Table 2**:
 
-(Table 2) 
+```{r, echo = FALSE, fig.align = "center", out.width="90%"}
+knitr::include_graphics("figs/ebay_price.png")
+```
 
 ---
 # Negative Feedback & Sales Growth
 
-Metric: Difference in Sales Growth before / after first negative feedback
+**Metric**: Difference in Sales Growth before / after first negative feedback
 
-(Table 3)
+```{r, echo = FALSE, fig.align = "center", out.width="90%"}
+knitr::include_graphics("figs/ebay_salesgrowth.png")
+```
 
 ---
 # Frequency of Negative Feedback
 
-Metric: Frequency of Arrival of Negative Feedback
+**Metric**: Frequency of Arrival of Negative Feedback
+
+```{r, echo = FALSE, fig.align = "center", out.width="90%"}
+knitr::include_graphics("figs/ebay_commentfreq.png")
+```
 
 ---
 # Managerial Implications
@@ -112,15 +149,133 @@ Metric: Frequency of Arrival of Negative Feedback
 ---
 class: inverse, center, middle
 
-# Reputation and Review Fraud
+# Online Review Manipulation
 
 ---
-# Slide Title 
+# Reputation Manipulation 
 
-course content here
+**Motivation**: Reputation is most useful when it's not tainted by "fake reviews"
+
+* Fake reviews lead to:
+  * Lower consumer welfare through suboptimal choices 
+  * Mistrust in online reviews and reputation
+
+**Question**: When does review manipulation occur?
+
+* Are there more fake reviews when competition is close by?
+* Do smaller hotels try to boost their reputation?
+  * More positive fake reviews for small hotels?
+  * More negative reviews for competitor nearby a small hotel?
+
+Following discussion based on [Mayzlin, Dover and Chevalier, 2014][mayzlin]
+
+[mayzlin]: https://pubs.aeaweb.org/doi/pdfplus/10.1257/aer.104.8.2421
 
 ---
-# Main Takeaways
+# Empirical Approach
+
+**Data**: Travel sites in the US - TripAdvisor & Expedia
+  * Star Ratings of all reviews for all hotels in subset of cities in the US
+  * Supplement with hotel industry data from Smith Travel Research
+
+**Empirical Approach**: 'akin to Difference in Differences'
+
+* But not DiD in a 'standard sense'
+
+
+* **What makes all this work**:
+  * Trip Advisor: Anyone can post at anytime
+  * Expedia: Can only post if booked on Expedia and stayed one night in last 6 months
+  * $\implies$ fake reviews are harder to post on Expedia
+  * **Assumption**: Users on each platform value hotel characteristics equally
+
+---
+# Regression Equation
+
+Estimate the following equation:
+
+$$
+\begin{equation}
+y_{ij} = X_{ij} B_1 + 
+   \text{OwnAf}_{ij} B_2 +
+   \text{Nei}_{ij} B_3+
+   \text{NeiOwnAf}_{ij} B_4 +
+   \sum \gamma_j + 
+   \varepsilon_{ij}
+\end{equation}
+$$
+
+Notation:
+
+* $i$ hotels, $j$ city
+* $y_{ij}$ Difference in share of $N$ star reviews between Trip Advisor and Expedia 
+* $X_{ij}$ are hotel characteristics
+* $\text{Nei}_{ij}$ = 1 if competitor hotel within 0.5 km, else zero
+  * We care about these coefficients, $B_3$
+* $\text{OwnAf}_{ij}$ are hotel ownership characteristics
+  * We care about these coefficents ($B_2$)
+* $\text{NeiOwnAf}_{ij}$ are competitor hotels ownership characteristics
+  * We care about these coefficents ($B_4$)
+
+---
+# Why this approach will work ...
+
+Authors don't observe review manipulation directly $\implies$ infer it from data patterns
+
+* It's easier to manipulate reviews on TripAdvisor...
+
+The story goes something like this:
+
+* If the fraction of low (high) reviews on Trip Advisor is larger than on Expedia 
+* And consumers value the hotel equally between platforms 
+* Then differences are likely due to review manipulation on Trip Advisor 
+
+So let's check out the results...
+
+---
+# Main Results
+
+```{r, echo = FALSE, fig.align = "center", out.width="67%"}
+knitr::include_graphics("figs/fake_main_results.png")
+```
+
+---
+# Interpreting Results
+
+Column 1:
+
+* $B_3$: 0.0192 $\implies$ hotels with a neighbouring competitor have a 1.9 percentage point increase in share of bad reviews
+  * approx. 7.5 percent increase compared to the baseline of 25 percent bad reviews
+
+Column 2: 
+
+* $B_3 + B_4$: $\implies$  hotels with an independent hotel as a  neighbouring competitor have a 4.7 percentage point increase in share of bad reviews
+  * approx. 20 percent increase compared to the baseline of 25 percent bad reviews  
+
+Column 3: 
+
+* $B_2$: $\implies$  independent hotels have a 3.4 percentage point increase in share of positive reviews
+  * approx. 7.5 percent increase compared to the baseline of 31 percent five star reviews
+
+---
+# Takeaways
+
+1. Hotels with neighbors have more negative reviews
+  * Suggestive of competitors giving each other negative fake reviews
+
+2. If neighbor is an independent hotel, (1) is even more likely 
+
+3. Independent hotels have higher reviews
+  * Suggestive of positive review manipulation
+  * But there are competing stories
+
+**Punchline**: evidence for fake reviews and manipulating online reputation
+  * Either by competitors (negative) or by the firm itself (positive)
+
+**Marketing Implications?**
+
+* More for platform owners ...
+* There's a need to try and monitor / control reviews
 
 ---
 class: inverse, center, middle
@@ -144,7 +299,7 @@ Following discussion based on [Chen et al, 2019][chen-etal]
 [chen-etal]: https://repository.arizona.edu/bitstream/handle/10150/632181/2%20ISR-MR-Paper.pdf?sequence=1
 
 ---
-# Empirical Approach
+# Empirical Approach: Natural Experiment
 
 **Data**: Travel Agencies in China (two): Ctrip & eLong
 

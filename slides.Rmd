@@ -128,7 +128,7 @@ class: inverse, center, middle
 # Managerial Response to Online Reviews
 
 ---
-# Something 
+# Managerial Reviews & Reputation 
 
 **Motivation**: Business increasingly proactive to managing reputation
 
@@ -139,9 +139,9 @@ class: inverse, center, middle
 * Are there more or less? $\implies$ volume effects
 * Are the more or less positive $\implies$ valence effects
 
-Following discussion based on [Chen et al, 2019][[chen-etal]]
+Following discussion based on [Chen et al, 2019][chen-etal]
 
-[chen-etal]: https://pubsonline.informs.org/doi/10.1287/isre.2018.0781
+[chen-etal]: https://repository.arizona.edu/bitstream/handle/10150/632181/2%20ISR-MR-Paper.pdf?sequence=1
 
 ---
 # Empirical Approach

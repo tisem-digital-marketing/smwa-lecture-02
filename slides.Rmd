@@ -289,7 +289,7 @@ Column 2:
 
 Column 3: 
 
-* $B_2$: $\implies$  **independent hotels have a 3.4 percentage point increase in share of positive reviews**
+* $B_2$: $\implies$  **independent hotels have a 2.4 percentage point increase in share of positive reviews**
   * approx. 7.5 percent increase compared to the baseline of 31 percent five star reviews
 
 ---

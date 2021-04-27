@@ -477,7 +477,7 @@ class: inverse, center, middle
 class: font160
 # Summary
 
-* Online reputation matters --- suggestive evidence that decreasing reputation decreases sales
+* Online reputation matters --- suggestive evidence that decreasing reputation is associated with decreases in sales
 
 * Competitors seem to use online platforms to post negative fake reviews about each other
   * And they might provide positive fake reviews about themselves

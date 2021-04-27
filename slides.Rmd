@@ -22,7 +22,7 @@ At the end of this lecture you will be able to:
 1. Summarize the impact of negative reputation on sales
 2. Diagnose situations where fake reviews are more or less prevalent
 3. Explain how managerial responses to online reviews impact future reviews
-4. Interpret estimates from Difference in Differences regression 
+4. Interpret regression estimates from existing studies
 
 ---
 class: inverse, center, middle
@@ -336,7 +336,7 @@ Following discussion based on [Chen et al, 2019][chen-etal]
 
 ---
 class: font160
-# Empirical Approach: Natural Experiment
+# Empirical Approach
 
 **Data**: Travel Agencies in China (two): Ctrip & eLong
 

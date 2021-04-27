@@ -57,6 +57,7 @@ knitr::include_graphics("figs/reputation_sales.png")
 Image from [WebpageFX](https://www.webpagefx.com/)
 
 ---
+class: font160
 # Why Online Reputation Matters
 
 Buyers need to trust sellers
@@ -76,15 +77,16 @@ $\implies$ **reputation systems**
 ... and design choices made by a marketplace
 
 ---
+class: font160
 # What do we want to know?
 
 This class:
 
 * How does seller reputation impact pricing and sales?
 * Do fake reviews impact online reputation? How? When?
-* Are managerial responses an effective way to manage online reputation?S
+* Are managerial responses an effective way to manage online reputation?
 
-Note: There's much more out there - let us know if you want further links in to the literature
+**Note**: There's much more out there - let us know if you want further links in to the literature
 
 ---
 class: inverse, center, middle
@@ -92,7 +94,8 @@ class: inverse, center, middle
 # Dynamics of Seller Reputation
 
 ---
-# Seller Reputation in the Online Marketplace 
+class: font160
+# Seller Reputation & Online Marketplaces 
 
 **Motivation**: Reputation mechanisms allow consumers to monitor firms
 
@@ -104,11 +107,12 @@ class: inverse, center, middle
 * Sales Growth
 * Subsequent reviews
 
-Following discussion based on [Cabral & Hortascu, 2010][cabral]
+Following discussion based on [Cabral & Hortacsu, 2010][cabral]
 
 [cabral]: https://onlinelibrary.wiley.com/doi/10.1111/j.1467-6451.2010.00405.x
 
 ---
+class: font160
 # Empirical Approach
 
 **Data**: eBay, follow sellers of five homogenous products
@@ -136,13 +140,14 @@ price = \beta ( \text{reputation_measure} ) +
         \text{error}
 $$
 
-**Excerpt fo Table 2**:
+**Excerpt from Table 2**:
 
 ```{r, echo = FALSE, fig.align = "center", out.width="90%"}
 knitr::include_graphics("figs/ebay_price.png")
 ```
 
 ---
+class: font160
 # Negative Feedback & Sales Growth
 
 **Metric**: Difference in Sales Growth before / after first negative feedback
@@ -152,6 +157,7 @@ knitr::include_graphics("figs/ebay_salesgrowth.png")
 ```
 
 ---
+class: font160
 # Frequency of Negative Feedback
 
 **Metric**: Frequency of Arrival of Negative Feedback
@@ -161,12 +167,13 @@ knitr::include_graphics("figs/ebay_commentfreq.png")
 ```
 
 ---
+class: font160
 # Managerial Implications
 
-1. Price / Willingess to Pay is not the main metric through which decreases in reputation operates
-2. Quantity sold is an important metric
+1. **Price / Willingess to Pay** is **not the main metric** through which decreases in reputation operates
+2. **Quantity sold** is an **important** metric
   * Sales decrease with negative feedback 
-3. Negative Feedback can generate more negative feedback
+3. **Negative Feedback can generate more negative feedback**
   * Though authors argue this is moral hazard - less effort by sellers
 
 ---
@@ -175,6 +182,7 @@ class: inverse, center, middle
 # Online Review Manipulation
 
 ---
+class: font160
 # Reputation Manipulation 
 
 **Motivation**: Reputation is most useful when it's not tainted by "fake reviews"
@@ -195,24 +203,27 @@ Following discussion based on [Mayzlin, Dover and Chevalier, 2014][mayzlin]
 [mayzlin]: https://pubs.aeaweb.org/doi/pdfplus/10.1257/aer.104.8.2421
 
 ---
+class: font140
 # Empirical Approach
 
 **Data**: Travel sites in the US - TripAdvisor & Expedia
   * Star Ratings of all reviews for all hotels in subset of cities in the US
   * Supplement with hotel industry data from Smith Travel Research
 
-**Empirical Approach**: 'akin to Difference in Differences'
+**Empirical Approach**: Linear Regression
 
-* But not DiD in a 'standard sense'
+* Authors argue its some kind of difference in difference regression
+  * We'll cover DiD next week in labs
+* This paper is not DiD in a 'standard sense'
 
-
-* **What makes all this work**:
+**What makes all this work**:
   * Trip Advisor: Anyone can post at anytime
   * Expedia: Can only post if booked on Expedia and stayed one night in last 6 months
   * $\implies$ fake reviews are harder to post on Expedia
   * **Assumption**: Users on each platform value hotel characteristics equally
 
 ---
+class: font130
 # Regression Equation
 
 Estimate the following equation:
@@ -236,11 +247,12 @@ Notation:
 * $\text{Nei}_{ij}$ = 1 if competitor hotel within 0.5 km, else zero
   * We care about these coefficients, $B_3$
 * $\text{OwnAf}_{ij}$ are hotel ownership characteristics
-  * We care about these coefficents ($B_2$)
+  * We care about these coefficents, $B_2$
 * $\text{NeiOwnAf}_{ij}$ are competitor hotels ownership characteristics
-  * We care about these coefficents ($B_4$)
+  * We care about these coefficents, $B_4$
 
 ---
+class: font160
 # Why this approach will work ...
 
 Authors don't observe review manipulation directly $\implies$ infer it from data patterns
@@ -267,35 +279,35 @@ knitr::include_graphics("figs/fake_main_results.png")
 
 Column 1:
 
-* $B_3$: 0.0192 $\implies$ hotels with a neighbouring competitor have a 1.9 percentage point increase in share of bad reviews
+* $B_3$: 0.0192 $\implies$ **hotels with a neighbouring competitor have a 1.9 percentage point increase in share of bad reviews**
   * approx. 7.5 percent increase compared to the baseline of 25 percent bad reviews
 
 Column 2: 
 
-* $B_3 + B_4$: $\implies$  hotels with an independent hotel as a  neighbouring competitor have a 4.7 percentage point increase in share of bad reviews
+* $B_3 + B_4$: $\implies$ **hotels with an independent hotel as a  neighbouring competitor have a 4.7 percentage point increase in share of bad reviews**
   * approx. 20 percent increase compared to the baseline of 25 percent bad reviews  
 
 Column 3: 
 
-* $B_2$: $\implies$  independent hotels have a 3.4 percentage point increase in share of positive reviews
+* $B_2$: $\implies$  **independent hotels have a 3.4 percentage point increase in share of positive reviews**
   * approx. 7.5 percent increase compared to the baseline of 31 percent five star reviews
 
 ---
 # Takeaways
 
-1. Hotels with neighbors have more negative reviews
+1. **Hotels with neighbors have more negative reviews**
   * Suggestive of competitors giving each other negative fake reviews
 
-2. If neighbor is an independent hotel, (1) is even more likely 
+2. If **neighbor is an independent** hotel, (1) is even **more likely** 
 
 3. Independent hotels have higher reviews
   * Suggestive of positive review manipulation
   * But there are competing stories
 
-**Punchline**: evidence for fake reviews and manipulating online reputation
+**Punchline**: Evidence for fake reviews and manipulating online reputation
   * Either by competitors (negative) or by the firm itself (positive)
 
-**Marketing Implications?**
+**Managerial Implications?**
 
 * More for platform owners ...
 * There's a need to try and monitor / control reviews
@@ -306,6 +318,7 @@ class: inverse, center, middle
 # Managerial Response to Online Reviews
 
 ---
+class: font160
 # Managerial Reviews & Reputation 
 
 **Motivation**: Business increasingly proactive to managing reputation
@@ -322,66 +335,82 @@ Following discussion based on [Chen et al, 2019][chen-etal]
 [chen-etal]: https://repository.arizona.edu/bitstream/handle/10150/632181/2%20ISR-MR-Paper.pdf?sequence=1
 
 ---
+class: font160
 # Empirical Approach: Natural Experiment
 
 **Data**: Travel Agencies in China (two): Ctrip & eLong
 
-**Empirical Approach**: Difference-in-Difference-in-Differences
+**Empirical Approach**: Linear Regression
 
-* This is an extension of the Difference in Differences idea we've seen before
-
-* **What makes all this work**: Ctrip introduces managerial response, eLong does not
-
----
-# Difference-in-Difference-in-Differences
-
-Why an extra difference? Let's think intuitively...
-
-* Assume only two periods, 1 and 2
-* Ctrip ($C$) allows managerial response in period 2, eLong ($E$) does not
-* $\bar{y}_{i,j}$ = average number of reviews on platform $i$ in period $j$
-
-**Difference in Differences**:
-
-* Difference in average volume between 2 periods across different platforms:
-
-$$
-\begin{equation}
-\hat{\beta}_{DiD} =  (\bar{y}_{C,2} - \bar{y}_{C,1}) - (\bar{y}_{E,2} - \bar{y}_{E,1})
-\end{equation}
-$$
-
-* Assumes that hotels that decide to use managerial response on Ctrip are not different to those who don't adopt it
-  * "No inherent (managerial) quality difference"
-  * If there is, it will make estimates of the treatment effect **biased**
-
-Why are we worrying about this?
-
-* Hotels can self select into whether they adopted Managerial Responses on Ctrip
-  * And those that do might be systematically different than non-adopters
-  * Self selection is *always* a worry when we want causality
+* They implement what is known as a "difference in the difference of differences" regression
+  * That will make more sense next week, after we formally talk about DiD
+  * We can interpret the results through what we already know about linear regression though!
 
 ---
-# Difference-in-Difference-in-Differences
+class: font160
+# Why this works ...
 
-* Some more notation:
-  * Let $A$ denote hotels that adopt managerial responses on Ctrip
-  * Let $N$ denote hotels that do not adopt managerial responses on Ctrip
+Ctrip introduces managerial response, eLong does not
 
-*Note*: We observe reviews of both types of hotels on both platforms!
+* Intuitively: comparing differences in reviews between platforms before and after managerial responses are introduced
+  * If there's a change - its due to the introduction of MR
+  * That's the "difference in difference" part
 
-**Difference-in-Difference-in-Differences**
+* Extra layer of concern: hotels choose whether to adopt managerial response
+  * So it's not "random"
+  * Trying to control for that is where the "extra difference" comes in
+  * (Though I am slightly skeptical...)
 
-* Difference in differences of average volumes between 2 periods and each hotel "type" across different platforms
+<!-- --- -->
+<!-- # Difference-in-Difference-in-Differences -->
 
-$$
-\begin{align}
-\hat{\beta}_{DDD} &= [ (\bar{y}_{C,A,2} - \bar{y}_{C,A,1}) - (\bar{y}_{C,N,2} - \bar{y}_{C,N,1})] \\
-     &- [ (\bar{y}_{E,A,2} - \bar{y}_{E,A,1}) - (\bar{y}_{E,N,2} - \bar{y}_{E,N,1})]
-\end{align}
-$$
+<!-- Why an extra difference? Let's think intuitively... -->
 
-We've "subtracted out" the differences in managerial quality
+<!-- * Assume only two periods, 1 and 2 -->
+<!-- * Ctrip ($C$) allows managerial response in period 2, eLong ($E$) does not -->
+<!-- * $\bar{y}_{i,j}$ = average number of reviews on platform $i$ in period $j$ -->
+
+<!-- **Difference in Differences**: -->
+
+<!-- * Difference in average volume between 2 periods across different platforms: -->
+
+<!-- $$ -->
+<!-- \begin{equation} -->
+<!-- \hat{\beta}_{DiD} =  (\bar{y}_{C,2} - \bar{y}_{C,1}) - (\bar{y}_{E,2} - \bar{y}_{E,1}) -->
+<!-- \end{equation} -->
+<!-- $$ -->
+
+<!-- * Assumes that hotels that decide to use managerial response on Ctrip are not different to those who don't adopt it -->
+<!--   * "No inherent (managerial) quality difference" -->
+<!--   * If there is, it will make estimates of the treatment effect **biased** -->
+
+<!-- Why are we worrying about this? -->
+
+<!-- * Hotels can self select into whether they adopted Managerial Responses on Ctrip -->
+<!--   * And those that do might be systematically different than non-adopters -->
+<!--   * Self selection is *always* a worry when we want causality -->
+
+<!-- --- -->
+<!-- # Difference-in-Difference-in-Differences -->
+
+<!-- * Some more notation: -->
+<!--   * Let $A$ denote hotels that adopt managerial responses on Ctrip -->
+<!--   * Let $N$ denote hotels that do not adopt managerial responses on Ctrip -->
+
+<!-- *Note*: We observe reviews of both types of hotels on both platforms! -->
+
+<!-- **Difference-in-Difference-in-Differences** -->
+
+<!-- * Difference in differences of average volumes between 2 periods and each hotel "type" across different platforms -->
+
+<!-- $$ -->
+<!-- \begin{align} -->
+<!-- \hat{\beta}_{DDD} &= [ (\bar{y}_{C,A,2} - \bar{y}_{C,A,1}) - (\bar{y}_{C,N,2} - \bar{y}_{C,N,1})] \\ -->
+<!--      &- [ (\bar{y}_{E,A,2} - \bar{y}_{E,A,1}) - (\bar{y}_{E,N,2} - \bar{y}_{E,N,1})] -->
+<!-- \end{align} -->
+<!-- $$ -->
+
+<!-- We've "subtracted out" the differences in managerial quality -->
 
 ---
 # Regression Equation
@@ -400,16 +429,24 @@ $$
 \end{equation}
 $$
 
-* $\beta$ is the treatment effect $\implies$ this is the (only) number we care about
+* $\beta$ is the treatment effect $\implies$ this is the (only) number we care about in this regression
 
-The 'extra' difference is in the use of $\Delta Y_{it}$ rather than $Y_{it}$
+Some notation:
 
-  * Not a 'totally standard' way of doing it, but it works
+* $i$ is a hotel, $t$ is time
+* $\Delta Y_{it}$ difference in review volume (valence) between Ctrip and eLong
+* $MR_i$ has hotel done any managerial response on Ctrip
+  * Binary variable -- 0 or 1
+* $After_{it}$ tells us whether managerial response feature has been "turned on" in the Ctrip Platform
+  * Binary variable -- 0 or 1
+
+$\implies$ $\beta$ is the average effect of managerial responses on the difference in review volume (valence) between platforms
 
 ---
-# Main Results - Impact on Volume, not Valence
+class: font130
+# Main Results - Volume, not Valence
 
-```{r, echo = FALSE, fig.align = "center", out.width="90%"}
+```{r, echo = FALSE, fig.align = "center", out.width="80%"}
 knitr::include_graphics("figs/mr_main_result.png")
 ```
 
@@ -419,8 +456,8 @@ Interpretation:
 * On average, 12.3% increase in monthly volume after adopting managerial responses 
 
 ---
+class: font130
 # Target & Style of Managerial Response
-
 
 ```{r, echo = FALSE, fig.align = "center", out.width="65%"}
 knitr::include_graphics("figs/mr_length_result.png")
@@ -437,7 +474,17 @@ class: inverse, center, middle
 # Recap
 
 ---
+class: font160
 # Summary
+
+* Online reputation matters --- suggestive evidence that decreasing reputation decreases sales
+
+* Competitors seem to use online platforms to post negative fake reviews about each other
+  * And they might provide positive fake reviews about themselves
+
+* Managing reputation via responses to comments on large platforms stimulates more volume 
+  * Does it effect reputation though?
+  * Group Assignment 1 will try and tackle this question!
 
 ---
 # License & Citation
